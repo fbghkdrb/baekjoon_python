@@ -1,2 +1,2 @@
-# 6-26_baekjoon
+# 2024.06.26 baekjoon start
 This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
