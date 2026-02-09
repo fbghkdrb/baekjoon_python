@@ -1,20 +1,16 @@
-N = int(input())
-li = list(map(int, input().split()))
+a = int(input())
+l = list(map(int, input().split()))
 count = 0
 
-for num in li :
-    if num == 1 :
+for i in l :
+    if i == 1 :
         continue
-    if num == 2 :
-        count += 1
-        continue
-    if_dec = True
-    for i in range(2, num) :
-        if num % i == 0 :
-            if_dec = False
+    tf = True
+    for j in range(2, i) :
+        if i % j == 0 :
+            tf = False
             break
-
-    if if_dec == True :
+    if tf == True :
         count += 1
 
 print(count)
