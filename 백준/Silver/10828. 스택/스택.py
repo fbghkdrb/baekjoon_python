@@ -1,29 +1,37 @@
-N = int(input())
-li = []
+array = list()
 
-commands = [input().split() for _ in range(N)]
+def push(data) :
+    array.append(data)
 
-for command in commands :
-    if command[0] == 'top' :
-        if li == [] :
-            print(-1)
-        else : 
-            print(li[-1])
-    elif command[0] == 'size' :
-        if li == [] :
-            print(0)
-        else :
-            print(len(li))
-    elif command[0] == 'empty' :
-        if li == [] :
-            print(1)
-        else :
-            print(0)
-    elif command[0] == 'pop' :
-        if li == [] :
-            print(-1)
-        else :
-            num = li.pop()
-            print(num)
-    elif command[0] == 'push' :
-        li.append(command[1])
+def pop() :
+    if len(array) == 0 :
+        return -1
+    return array.pop()
+
+def size() :
+    return len(array)
+
+def empty() :
+    if len(array) == 0 :
+        return 1
+    else :
+        return 0
+    
+def top() :
+    if len(array) == 0 :
+        return -1
+    return array[-1]
+
+l = int(input())
+a = [input() for _ in range(l)]
+for i in a :
+    if i.startswith('push') :
+        push(int(i.split()[1]))
+    elif i.startswith('pop') :
+        print(pop())
+    elif i.startswith('size') :
+        print(size())
+    elif i.startswith('empty') :
+        print(empty())
+    elif i.startswith('top') :
+        print(top())
